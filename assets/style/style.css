@@ -1,0 +1,332 @@
+.carHeader {
+    height: 40vh !important;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+nav {
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.anchorPages a {
+    border: solid 1px rgb(13, 110, 253);
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.anchorPages a:hover {
+    background-color: rgb(13, 110, 253);
+    color: white;
+}
+
+.inputSearch {
+    border: solid 1px rgba(0, 0, 0, 0.493);
+    border-radius: 6px;
+    width: 30vw;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.anchorPages {
+    margin-right: 2rem;
+    width: 45vw;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.imCar {
+    object-fit: cover !important;
+    object-position: center !important;
+    height: 50vh !important;
+}
+
+h1 {
+    z-index: 1 !important;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.493);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    font-size: 3rem !important;
+}
+
+main {
+    min-height: 80vh;
+
+}
+
+#check {
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contPrin {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.card:hover {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.card-text {
+    height: 15vh !important;
+}
+
+.card-img-top {
+    height: 20vh;
+    object-fit: cover;
+}
+
+.price {
+    margin-bottom: 0 !important;
+    margin-top: 5px;
+}
+
+.logoAmazing {
+    margin-left: 2rem;
+    height: 6vh;
+    width: 14vw;
+    object-fit: contain;
+}
+
+#mainContact {
+    min-height: 50vh;
+    margin-top: 1rem;
+}
+
+.mainStats {
+    min-height: 60vh;
+}
+
+.form-control {
+    border: solid 1px rgb(33, 20, 65) !important;
+}
+
+table {
+    width: 70vw;
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    border: solid 1px black !important;
+    border-collapse: collapse;
+    width: 10vw;
+    height: 5vh;
+}
+
+#enc {
+    border: solid 1px black !important;
+    background-color: rgba(74, 42, 133, 0.575);
+    text-align: center !important;
+}
+
+th {
+    border: solid 1px black !important;
+    background-color: rgba(74, 42, 133, 0.185);
+    text-align: center !important;
+}
+
+.mainDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.detPrin {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    height: 50vh;
+    border: solid 1px black;
+    border-radius: 1rem;
+}
+
+.imgDetails {
+    border-radius: 1rem;
+    width: 35vw;
+}
+
+.eventDetails {
+    border: solid 1px black;
+    width: 40vw;
+    height: 45vh;
+    border-radius: 1rem;
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+footer {
+    border-top: solid 1.5px rgb(16, 15, 53);
+    padding-left: 3rem;
+    padding-right: 4rem;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialFoot {
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+}
+
+.socialFoot img {
+    width: 3vw;
+}
+
+.idCohort {
+    font-weight: bold;
+}
+
+/* TABLET */
+@media (min-width:768px) and (max-width: 1023px) {
+    .anchorPages {
+        margin-right: 1rem;
+        width: 65vw;
+    }
+
+    .logoAmazing {
+        margin-left: 1rem;
+        height: 10vh;
+        width: 25vw;
+    }
+
+    .socialFoot img {
+        width: 6vw;
+
+    }
+
+    .socialFoot {
+        width: 25vw;
+    }
+
+    .detPrin {
+        width: 90vw;
+        height: 63vh;
+    }
+
+    .eventDetails {
+        width: 40vw;
+        height: 57vh;
+    }
+
+    .imgDetails {
+        width: 40vw;
+    }
+
+    table {
+        width: 90vw;
+    }
+
+    #mainContact {
+        min-height: 55vh;
+    }
+
+}
+
+/* MOBILE */
+@media(max-width:767px) {
+    nav {
+        flex-direction: column;
+        padding-bottom: .5rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #mainContact {
+        min-height: 55vh;
+    }
+
+    .mainStats {
+        min-height: 60vh;
+    }
+
+    table {
+        width: 90vw;
+    }
+
+    .logoAmazing {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 0;
+        width: 80vw;
+        height: 10vh;
+    }
+
+    .anchorPages {
+        width: 80vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px;
+        margin: 0 !important;
+    }
+
+    .checkSear {
+        flex-direction: column;
+        gap: 5px;
+        /* padding: 0 !important; */
+    }
+
+    .inputSearch {
+        width: 90vw;
+    }
+
+    .mainDetails {
+        min-height: 95vh;
+    }
+
+    .imgDetails {
+        width: 80vw;
+    }
+
+    .eventDetails {
+        width: 80vw;
+        height: 62vh;
+        padding-right: 7px;
+    }
+
+    .detPrin {
+        flex-direction: column;
+        width: 85vw;
+        min-height: 90vh;
+    }
+
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .socialFoot img {
+        margin: 5px;
+        width: 12vw;
+    }
+}

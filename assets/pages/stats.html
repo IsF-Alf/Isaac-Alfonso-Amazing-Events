@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <nav>
+            <img class="logoAmazing" src="../images/amazing_brand.png" alt="Logo Amazing Events">
+            <div class="anchorPages">
+                <a href="../../index.html">Home</a>
+                <a href="../pages/upcomingEvents.html">Upcoming Events</a>
+                <a href="../pages/pastEvents.html">Past Events</a>
+                <a href="../pages/contact.html">Contact</a>
+                <a href="#">Stats</a>
+            </div>
+        </nav>
+        <header>
+            <div id="carouselExampleAutoplaying" class="carousel slide carHeader" data-bs-ride="carousel">
+                <div class="carousel-inner carHeader">
+                    <h1 class="top-50 start-50 translate-middle position-absolute">Stats</h1>
+                    <div class="carousel-item active">
+                        <img src="../images/optional_banner_1.jpg" class="d-block w-100 imCar" alt="Banner 1">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="../images/optional_banner_2.jpg" class="d-block w-100 imCar" alt="Banner 2">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="../images/optional_banner_3.jpg" class="d-block w-100 imCar" alt="Banner 3">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="../images/optional_banner_4.jpg" class="d-block w-100 imCar" alt="Banner 4">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="../images/optional_banner_5.jpg" class="d-block w-100 imCar" alt="Banner 5">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </header>
+        <main class="mainStats d-flex flex-column justify-content-center align-items-center">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" id="enc">Events statistics</th>
+                    </tr>
+                    <tr>
+                        <th>Events whit highest % of asistance</th>
+                        <th>Events with lowest % of assistance</th>
+                        <th>Events with larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody id="eventsStatic" class="text-center">
+                    <tr>
+                        <td>{{eventoConMenorPorcentaje.name}}: {{eventoConMenorPorcentaje.porcentaje}}%</td>
+                        <td>{{eventoConMayorPorcentaje.name}}: {{eventoConMayorPorcentaje.porcentaje}}%</td>
+                        <td>{{eventoConMayorCapacidad.name}}: {{eventoConMayorCapacidad.capacity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" id="enc">Upcoming events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of assistance</th>
+                    </tr>
+                </thead>
+                <tbody id="upcominEvent" class="text-center">
+                    <tr v-for="categoria of arrayObjUp">
+                        <td>{{categoria.categoria}}</td>
+                        <td>${{categoria.ganancia}}</td>
+                        <td>{{categoria.porcentajeAsistencia}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" id="enc">Past events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Revenues</th>
+                        <th>Percentage of assistance</th>
+                    </tr>
+                </thead>
+                <tbody id="pastEvent" class="text-center">
+                    <tr v-for="categoria of arrayObjPast">
+                        <td>{{categoria.categoria}}</td>
+                        <td>${{categoria.ganancia}}</td>
+                        <td>{{categoria.porcentajeAsistencia}}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <div class="socialFoot">
+                <img src="../images/instagram.png" alt="logInstagram">
+                <img src="../images/whatsapp.png" alt="logWhatsapp">
+                <img src="../images/facebook.png" alt="logfacebook">
+            </div>
+            <p class="idCohort">COHORT 51</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../scripts/stats.js"></script>
+</body>
+
+</html>
