@@ -124,19 +124,17 @@ main {
 
 table {
     width: 70vw;
-    border-collapse: collapse;
+    border-radius: 5px !important;
 }
 
 tr,
 td {
     border: solid 1px black !important;
-    border-collapse: collapse;
     width: 10vw;
     height: 5vh;
 }
 
 #enc {
-    border: solid 1px black !important;
     background-color: rgba(74, 42, 133, 0.575);
     text-align: center !important;
 }
